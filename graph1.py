@@ -9,7 +9,15 @@ st.title("Flight Data Dashboard")
 df=pd.read_csv("passengers.csv")
 
 #Create a bar chart
-fig=px.bar(df, x="Year", y="Domestic", title="Total Passengers Domestic Flights")
+fig1=px.bar(df, x="Year", y="Domestic", title="Total Passengers Domestic Flights")
 
-#Display the Plotly chart in Streamlit
-st.plotly_chart(fig)
+fig2=px.bar(df, x="Year", y="Domestic", title="Total Passengers International Flights")
+
+# Arrange plots: grid layout
+col1, col2 =st.columns(2) #Create 2 columns
+
+with col1:
+st.plotly_chart(fig1, use_container_width=True)
+
+with col2:
+st.plotly_chart(fig2, use_container_width=True)
