@@ -9,7 +9,7 @@ st.title("Flight Data Dashboard")
 df=pd.read_csv("passengers_yearly.csv")
 
 #Create a bar chart
-fig1=px.bar(df, x="Year", y="Domestic", title="Total Passenger Domestic Flights")
+fig1=px.line(df, x="Year", y="Domestic", title="Total Passenger Domestic Flights")
 
 fig2=px.bar(df, x="Year", y="International", title="Total Passenger International Flights")
 
