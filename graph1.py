@@ -6,7 +6,7 @@ import pandas as pd
 st.title("Flight Data Dashboard")
 
 #Flight data:Passengers
-df=pd.read_csv('passengers.csv')
+df=pd.read_csv("passengers.csv")
 
 #Create a bar chart
 fig=px.bar(df, x="Year", y="Domestic", title="Total Passengers Domestic Flights")
