@@ -16,11 +16,11 @@ fig2=px.bar(df, x="Year", y="International", title="Passengers: International Fl
 
 fig3=px.bar(df, x="Year", y="Total", title="Total Passengers: All Flights")
 
-fig4=px.bar(df2, x="Year", y="DOMESTIC", title="Domestic Operating Revenue")
+fig4=px.bar(df2, x="Year", y="Domestic", title="Operating Revenue: Domestic")
 
-fig5=px.bar(df2, x="Year", y="INTERNATIONAL", title="International Operating Revenue")
+fig5=px.bar(df2, x="Year", y="International", title="Operating Revenue: International")
 
-fig6=px.bar(df2, x="Year", y="TOTAL", title="Total Operating Revenue")
+fig6=px.bar(df2, x="Year", y="Total", title="Total Operating Revenue")
 
 # Arrange plots: grid layout
 col1, col2 =st.columns(2) #Create 2 columns
@@ -40,5 +40,5 @@ with col1:
 with col2:
   st.plotly_chart(fig5, use_container_width=True)
 
+# Sixth plot is full-width
 st.plotly_chart(fig6, use_container_width=True)
-
