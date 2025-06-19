@@ -16,7 +16,7 @@ fig2=px.bar(df, x="Year", y="International", title="Passengers: International Fl
 
 fig3=px.bar(df, x="Year", y="Total", title="Total Passengers: All Flights")
 
-fig4=px.bar(df2, x="Year", y="Total", title="Total Operating Revenue")
+fig4=px.bar(df2, x="Year", y="TOTAL", title="Total Operating Revenue")
 
 # Arrange plots: grid layout
 col1, col2 =st.columns(2) #Create 2 columns
